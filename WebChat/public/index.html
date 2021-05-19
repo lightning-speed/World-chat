@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quick Chat</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.6.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.6.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.6.1/firebase-performance.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+   
+  </head>
+  <body onload="hide()">
+   
+    <link rel="stylesheet" type="text/css" href="lib\app_ui.css">
+    <script src="lib\data_io\data.js">
+    </script>
+     <script src="lib\app_core\chat_core.js"></script>
+    
+     <textarea id="tx" placeholder="Type a message here"></textarea>
+     <input type="button"onclick="send()" id="se"value="&#10148">
+     <p id="ap"></p>
+     <div id="poti">
+       <p id="pot"></p>
+     </div>
+     <input type="button" onclick="clea()" id="cl" value="&#128465;">
+     <div id="boxg">
+      Please type a name to enter the chat
+       <br>
+       <br>
+       <input type="text" id="inu">
+       <br>
+       <br>
+       <input type="button" id="sub"value="Enter"onclick="user=inu.value;getUser();">
+     </div>
+  </body>
+</html>
